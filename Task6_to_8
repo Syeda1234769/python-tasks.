@@ -1,0 +1,181 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyO8UN5P6BVoRUSAuqev74IB",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Syeda1234769/python-tasks./blob/basic/Task6_to_8\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "lp2yjOujBMcq"
+      },
+      "outputs": [],
+      "source": [
+        "#Syeda Azka Batool\n",
+        "#875669"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "  #Task6\n",
+        "total_bill = 0\n",
+        "total_products=int(input(\"enter the total_products  \"))\n",
+        "\n",
+        "for i in range(1, total_products+1):\n",
+        "  product_name=input(f\"enter product_name {i}: \")\n",
+        "  product_price=int(input(f\"enter product_price of {product_name}  \"))\n",
+        "  product_quantity=int(input(f\"enter product_quantity of {product_name}   \"))\n",
+        "\n",
+        "  subtotal = product_price*product_quantity\n",
+        "  total_bill = total_bill + subtotal\n",
+        "if total_bill >= 5000:\n",
+        "    discount = total_bill * 10 / 100\n",
+        "    final_bill = total_bill+ discount\n",
+        "else:\n",
+        "     discount=0\n",
+        "     final_bill =total_bill\n",
+        "print(\"============/nGrocery Shoping Bill/n============\")\n",
+        "print(f\"total bill:{total_bill}\")\n",
+        "print(f\"discount :{discount}\")\n",
+        "print(f\"final bill:{final_bill}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "K8oeMRFdBjzD",
+        "outputId": "8dd271ed-aea9-486b-9394-749fa54da2cd"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the total_products  2\n",
+            "enter product_name 1: egg\n",
+            "enter product_price of egg  400\n",
+            "enter product_quantity of egg   1\n",
+            "enter product_name 2: oil\n",
+            "enter product_price of oil  6000\n",
+            "enter product_quantity of oil   1\n",
+            "============/nGrocery Shoping Bill/n============\n",
+            "total bill:6400\n",
+            "discount :640.0\n",
+            "final bill:7040.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#task7\n",
+        "employee_name= input(\"enter employee_name    \")\n",
+        "working_hours= float(input(\"enter working_hours  \"))\n",
+        "hourly_rate= float(input(\"enter hourly_rate   \"))\n",
+        "normal_hourly_rate = working_hours*hourly_rate\n",
+        "\n",
+        "print(f\"normal_hourly_rate:{normal_hourly_rate}\")\n",
+        "\n",
+        "overtime_hours = working_hours - 40\n",
+        "overtime_rate = hourly_rate * 1.5\n",
+        "overtime_salary = overtime_hours * overtime_rate\n",
+        "\n",
+        "print(f\"overtime_salary:{overtime_salary}\")\n",
+        "\n",
+        "normal_salary= normal_hourly_rate + overtime_salary\n",
+        "\n",
+        "print(f\"normal_salary:{normal_salary}\")\n",
+        "\n",
+        "total_salary = normal_salary + overtime_salary\n",
+        "\n",
+        "print(f\"total_salary: {total_salary}\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_5-0UcK2IKr-",
+        "outputId": "5d158343-d8a2-4216-856c-4078fb614529"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter employee_name    azka\n",
+            "enter working_hours  45\n",
+            "enter hourly_rate   1200\n",
+            "normal_hourly_rate:54000.0\n",
+            "overtime_salary:9000.0\n",
+            "normal_salary:63000.0\n",
+            "total_salary: 72000.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#task8\n",
+        "available_seats= [1,2,3,4,5,6,7,8,9,10]\n",
+        "seat_number=int(input(\"enter seat_number   \"))\n",
+        "if seat_number in available_seats:\n",
+        "  print(\"your seat is booked\")\n",
+        "else:\n",
+        " print(\"already booked\")\n",
+        " print(f\"available_seats:{available_seats}\")\n",
+        " print(input(\"enter seat_number  \"))\n",
+        " print(\"your seat is booked\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e297a14c-d0e8-4a0c-931c-971e5ac17138",
+        "id": "0HFc8M8Q115_"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter seat_number   22\n",
+            "already booked\n",
+            "available_seats:[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+            "enter seat_number  2\n",
+            "2\n",
+            "your seat is booked\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
